@@ -1,24 +1,24 @@
-posts:
-  allowedFields: ["title", "followup"]
-  branch: "master"
-  commitMessage: "Add post {@id}"
-  filename: "{@date:YYYY-MM-DD}-{@id}"
-  format: "frontmatter"
+#posts:
+allowedFields: ["title", "followup"]
+branch: "master"
+commitMessage: "Add post {@id}"
+filename: "{@date:YYYY-MM-DD}-{@id}"
+format: "frontmatter"
 
-  generatedFields:
-    timestamp:
-      type: date
-      options:
-        format: "timestamp-seconds"
-    layout: "post"
+generatedFields:
+  timestamp:
+    type: date
+    options:
+      format: "timestamp-seconds"
+  layout: "post"
 
-  moderation: false
-  name: "mx-psi ask"
+moderation: false
+name: "mx-psi.github.io/ask"
 
-  notifications:
-    enabled: true
-    apiKey: "1q2w3e4r" # (!) ENCRYPTED
-    domain: "4r3e2w1q" # (!) ENCRYPTED
+# notifications:
+#   enabled: true
+#   apiKey: "1q2w3e4r" # (!) ENCRYPTED
+#   domain: "4r3e2w1q" # (!) ENCRYPTED
 
-  path: "_posts"
-  requiredFields: ["title"]
+path: "_posts"
+requiredFields: ["title"]

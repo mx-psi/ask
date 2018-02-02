@@ -16,7 +16,7 @@
       <form method="post" action="https://api.staticman.net/v2/entry/mx-psi/ask/master">
         <fieldset>
           <div>
-            <textarea name="fields[question]" id="posts[question]" rows="4" type="text"></textarea>
+            <textarea name="fields[title]" id="posts[title]" rows="4" type="text"></textarea>
           </div>
         </fieldset>
         <fieldset>
@@ -27,7 +27,7 @@
       <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
       <script>
         var simplemde = new SimpleMDE({
-        element: document.getElementById("posts[question]"),
+        element: document.getElementById("posts[title]"),
         autosave: {
 		    enabled: true,
 		    uniqueId: "posts[question]",
