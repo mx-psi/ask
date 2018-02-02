@@ -1,0 +1,43 @@
+<div class="sidebar">
+  <div class="sidebar-banner" style="background-image:url({{ site.baseurl }}{{ site.banner }});"> </div>
+
+    <div class="icon" style="background-image:url({{ site.baseurl }}{{ site.avatar }});"></div>
+    <div class="user">
+      <span class="sidebar-name">
+        <a href="{{ site.url }}">{{ site.author.name }}</a>
+      </span>
+    </div>
+
+    <div class="container sidebar-sticky">
+      <div class="reply-to">
+        Pulsa <i class="fa fa-reply" aria-hidden="true"></i> para continuar una pregunta
+      </div>
+
+      <form method="post" action="https://api.staticman.net/v2/entry/eduardoboucas/popcorn/gh-pages">
+        <fieldset>
+          <div>
+            <textarea name="fields[question]" id="posts[question]" rows="4" type="text"></textarea>
+          </div>
+        </fieldset>
+        <fieldset>
+          <button class="send-button">Enviar</button>
+        </fieldset>
+      </form>
+
+      <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
+      <script>
+        var simplemde = new SimpleMDE({
+        element: document.getElementById("posts[question]"),
+        autosave: {
+		    enabled: true,
+		    uniqueId: "posts[question]",
+		    delay: 1000,
+	      },
+        toolbar: ["bold", "italic", "|", "quote", "link", "|", "preview", "guide"],
+        placeholder: "Hazme una pregunta!",
+        spellChecker: false,
+        status: false
+        });
+      </script>
+    </div>
+</div>

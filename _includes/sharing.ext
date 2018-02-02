@@ -1,0 +1,41 @@
+{% capture escaped_title %}
+{{ include.title | cgi_escape }}
+{% endcapture %}
+<div class="sharing">
+
+<!--Reply button-->
+
+<a class="resp-sharing-button__link" id="reply-{{ include.title | slugify }}" href="javascript:void(0)" aria-label="">
+  <div class="resp-sharing-button resp-sharing-button--small attention"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+      <i class="fa fa-reply" aria-hidden="true"></i>
+    </div>
+  </div>
+</a>
+
+
+<!-- Sharingbutton Facebook -->
+<a class="resp-sharing-button__link" href="https://facebook.com/sharer/sharer.php?u={{ site.url }}{{ include.url }}" target="_blank" aria-label="">
+  <div class="resp-sharing-button resp-sharing-button--facebook resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <i class="fa fa-facebook" aria-hidden="true"></i>
+    </div>
+  </div>
+</a>
+
+<!-- Sharingbutton Twitter -->
+<a class="resp-sharing-button__link" href="https://twitter.com/intent/tweet/?text={{ escaped_title }}&amp;url={{ site.url }}{{ include.url }}" target="_blank" aria-label="">
+  <div class="resp-sharing-button resp-sharing-button--twitter resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+ <i class="fa fa-twitter" aria-hidden="true"></i>
+    </div>
+  </div>
+</a>
+
+<!-- Sharingbutton link -->
+<a class="resp-sharing-button__link" href="{{ site.url }}{{ include.url }}" target="_blank" aria-label="">
+  <div class="resp-sharing-button resp-sharing-button--link resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <i class="fa fa-external-link" aria-hidden="true"></i>
+    </div>
+  </div>
+</a>
+
+
+</div>

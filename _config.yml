@@ -1,0 +1,14 @@
+plugins: [jekyll-paginate]
+permalink: pretty
+
+title: Pregúntame
+url:   https://mx-psi.github.io/ask
+baseurl: "/"
+paginate: 20
+
+author:
+  name: 'Sparkles'
+  twitter: mx_psi
+
+avatar: public/avatar.jpg
+banner: public/banner.jpg

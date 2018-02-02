@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+<article lang="es" class="post">
+    <header>
+      <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
+            property="dct:title" rel="dct:type" class="question">{{ page.title | escape | markdownify }}</span>
+      <a href="{{ page.url }}">{% include date.ext date=page.date %}</a>
+    </header>
+  <div class="answer">
+    {{ content }}
+  </div>
+  {% include sharing.ext url=page.url title=page.title %}
+</article>
