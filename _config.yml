@@ -3,7 +3,7 @@ permalink: pretty
 
 title: Ask
 url:   https://mx-psi.github.io/ask
-baseurl: ""
+#baseurl: ""
 paginate: 20
 
 author:
