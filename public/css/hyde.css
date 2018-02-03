@@ -109,6 +109,7 @@ html {
   .sidebar-banner{
     height: 25vh;
     min-height: 60px;
+    max-height: 22rem;
   }
 
   .user{

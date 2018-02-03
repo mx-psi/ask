@@ -14,7 +14,7 @@
       </div>
 
       <form method="post" action="https://api.staticman.net/v2/entry/mx-psi/ask/master">
-        <input name="options[redirect]" type="hidden" value="{{ site.baseurl }}/{{ page.url }}">
+        <input name="options[redirect]" type="hidden" value="{{ site.url }}{{ site.baseurl }}{{ page.url }}">
         <fieldset>
           <div>
             <textarea name="fields[title]" id="posts[title]" rows="4" type="text"></textarea>
@@ -31,20 +31,14 @@
         element: document.getElementById("posts[title]"),
         autosave: {
 		    enabled: true,
-		    uniqueId: "posts[question]",
+		    uniqueId: "posts[title]",
 		    delay: 1000,
 	      },
         toolbar: ["bold", "italic", "|", "quote", "link", "|", "preview", "guide"],
         placeholder: "{{ site.placeholder }}",
         spellChecker: false,
-        status: false
         });
       </script>
-      <style>
-        .CodeMirror{
-        height: 35vh;
-        min-height: 1rem;
-        }
-      </style>
+      <style>.CodeMirror{min-height: 1rem; max-height: 25vh;}</style>
     </div>
 </div>

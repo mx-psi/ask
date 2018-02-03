@@ -2,8 +2,8 @@ plugins: [jekyll-paginate]
 permalink: pretty
 
 title: Ask
-url:   https://mx-psi.github.io/ask
-#baseurl: ""
+url: https://mx-psi.github.io
+baseurl: /ask
 paginate: 20
 
 author:
