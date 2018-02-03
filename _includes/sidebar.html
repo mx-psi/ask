@@ -14,6 +14,7 @@
       </div>
 
       <form method="post" action="https://api.staticman.net/v2/entry/mx-psi/ask/master">
+        <input name="options[redirect]" type="hidden" value="{{ site.baseurl }}/{{ page.url }}">
         <fieldset>
           <div>
             <textarea name="fields[title]" id="posts[title]" rows="4" type="text"></textarea>
