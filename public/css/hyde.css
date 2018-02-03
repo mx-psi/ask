@@ -95,6 +95,7 @@ html {
   font-size: 1rem;
 }
 
+
 @media (min-width: 48em) {
   .sidebar {
     position: fixed;
@@ -106,7 +107,8 @@ html {
   }
 
   .sidebar-banner{
-    height: 16rem;
+    height: 25vh;
+    min-height: 60px;
   }
 
   .user{
@@ -159,16 +161,16 @@ a.sidebar-nav-item:focus {
 
 @media (min-width: 48em) {
   .content {
-    max-width: 42rem;
+    max-width: 52rem;
     margin-left: 24rem;
-    margin-right: 2rem;
+    margin-right: 1rem;
   }
 }
 
 @media (min-width: 64em) {
   .content {
     margin-left: 24rem;
-    margin-right: 4rem;
+    margin-right: 1rem;
   }
 }
 
@@ -179,4 +181,5 @@ a.sidebar-nav-item:focus {
 
 .reply-to{
   padding: 1rem 1rem;
+  padding-top: 3rem;
 }

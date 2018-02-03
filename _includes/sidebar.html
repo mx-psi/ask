@@ -8,7 +8,7 @@
       </span>
     </div>
 
-    <div class="container sidebar-sticky">
+    <div class="container">
       <div class="reply-to">
         Pulsa <i class="fa fa-reply" aria-hidden="true"></i> para continuar una pregunta
       </div>
@@ -34,10 +34,16 @@
 		    delay: 1000,
 	      },
         toolbar: ["bold", "italic", "|", "quote", "link", "|", "preview", "guide"],
-        placeholder: "Hazme una pregunta!",
+        placeholder: "{{ site.placeholder }}",
         spellChecker: false,
         status: false
         });
       </script>
+      <style>
+        .CodeMirror{
+        height: 35vh;
+        min-height: 1rem;
+        }
+      </style>
     </div>
 </div>

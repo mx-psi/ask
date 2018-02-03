@@ -1,9 +1,9 @@
 plugins: [jekyll-paginate]
 permalink: pretty
 
-title: Pregúntame
+title: Ask
 url:   https://mx-psi.github.io/ask
-baseurl: "/"
+baseurl: ""
 paginate: 20
 
 author:
@@ -12,3 +12,4 @@ author:
 
 avatar: public/avatar.jpg
 banner: public/banner.jpg
+placeholder: "Haz una pregunta"

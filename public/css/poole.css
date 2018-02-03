@@ -429,6 +429,7 @@ a.pagination-item:hover {
   color: #666;
   margin-left: 1rem;
   padding: .5rem .5rem;
+  word-wrap: break-word;
 }
 
 fieldset{

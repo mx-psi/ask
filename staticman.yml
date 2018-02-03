@@ -6,11 +6,12 @@ filename: "{@date:YYYY-MM-DD}-{@id}"
 format: "frontmatter"
 
 generatedFields:
-  timestamp:
+  date:
     type: date
     options:
-      format: "timestamp-seconds"
-  layout: "post"
+      format: "iso8601"
+  layout: post
+  hidden: true
 
 moderation: false
 name: "mx-psi.github.io/ask"
