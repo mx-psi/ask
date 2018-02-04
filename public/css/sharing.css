@@ -42,8 +42,11 @@
 }
 
 .resp-sharing-button__link {
+  color: inherit;
+}
+
+.resp-sharing-button__link:hover{
   text-decoration: none;
-  color: #fff;
 }
 
 .resp-sharing-button--large .resp-sharing-button__icon svg {
@@ -62,7 +65,7 @@
 
 .sharing {
   display: block;
-  width: 11rem;
+  width: 7.5rem;
   margin-left: auto;
   magin-right: 0;
   background-color: #f8f8f8;

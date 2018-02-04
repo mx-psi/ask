@@ -4,14 +4,14 @@
     <div class="icon" style="background-image:url({{ site.baseurl }}/{{ site.avatar }});"></div>
     <div class="user">
       <span class="sidebar-name">
-        <a href="{{ site.url }}">{{ site.author.name }}</a>
+        <a href="{{ site.url }}{{ site.baseurl }}">{{ site.author.name }}</a>
       </span>
     </div>
 
     <div class="container">
-      <div class="reply-to">
-        Pulsa <i class="fa fa-reply" aria-hidden="true"></i> para continuar una pregunta
-      </div>
+      <!-- <div class="reply-to"> (TODO) -->
+      <!--   Pulsa <i class="fa fa-reply" aria-hidden="true"></i> para continuar una pregunta -->
+      <!-- </div> -->
 
       <form method="post" action="https://api.staticman.net/v2/entry/mx-psi/ask/master">
         <input name="options[redirect]" type="hidden" value="{{ site.url }}{{ site.baseurl }}{{ page.url }}">
@@ -37,6 +37,7 @@
         toolbar: ["bold", "italic", "|", "quote", "link", "|", "preview", "guide"],
         placeholder: "{{ site.placeholder }}",
         spellChecker: false,
+        status: false
         });
       </script>
       <style>.CodeMirror{min-height: 1rem; max-height: 25vh;}</style>
