@@ -1,6 +1,6 @@
 allowedFields: ["title", "followup"]
 branch: "master"
-commitMessage: ":speech_balloon:: {@fields.title}"
+commitMessage: ":speech_balloon:: {fields.title}"
 filename: "{@date:YYYY-MM-DD}-{@id}"
 format: "frontmatter"
 
