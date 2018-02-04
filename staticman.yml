@@ -13,7 +13,7 @@ generatedFields:
   hidden: true
   message: " "
 
-moderation: false
+moderation: true
 name: "mx-psi.github.io/ask"
 
 # notifications:
