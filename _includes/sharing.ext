@@ -1,5 +1,5 @@
 {% capture escaped_title %}
-{{ include.title | cgi_escape }}
+{{ include.title | markdownify | strip_html | strip | truncate:130 | url_encode }} — {{ include.content | markdownify | strip_html | strip | truncate:100 | url_encode }}
 {% endcapture %}
 <div class="sharing">
 
@@ -30,7 +30,7 @@
 </a>
 
 <!-- Sharingbutton link -->
-<a class="resp-sharing-button__link" href="{{ site.url }}{{ include.url }}" target="_blank" aria-label="">
+<a class="resp-sharing-button__link" href="{{ site.url }}{{ site.baseurl }}{{ include.url }}" target="_blank" aria-label="">
   <div class="resp-sharing-button resp-sharing-button--link resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
     <i class="fa fa-external-link" aria-hidden="true"></i>
     </div>

@@ -15,7 +15,7 @@ title: Home
      {{ post.content }}
    </div>
 
-   {% include sharing.ext url=post.url title=post.title %}
+  {% include sharing.ext url=post.url title=post.title content=post.content %}
   </div>
   {% endfor %}
 </div>
