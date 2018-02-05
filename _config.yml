@@ -1,4 +1,4 @@
-plugins: [jekyll-paginate]
+plugins: [jekyll-paginate, jemoji]
 permalink: pretty
 
 title: Ask
@@ -12,4 +12,3 @@ author:
 
 avatar: public/avatar.jpg
 banner: public/banner.jpg
-placeholder: "Haz una pregunta"

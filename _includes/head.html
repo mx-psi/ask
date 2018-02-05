@@ -12,12 +12,16 @@
 
   <!--Twitter-->
   <meta name="twitter:card" content="summary"/>
-  <meta name="twitter:creator" content="@mx_psi"/>
-  <meta name="twitter:site" content="@mx_psi" />
-  <meta name="og:url" content="{{ site.url }}{{ page.url }}"/>
+  <meta name="twitter:creator" content="@{{ site.author.twitter }}"/>
+  <meta name="twitter:site" content="@{{ site.author.twitter }}" />
+  <meta name="og:url" content="{{ page.url | absolute_url }}"/>
   <meta name="og:title" content="{% if page.title == "Home" %}{{ site.title }}{% else %}{{ page.title }}{% endif %}"/>
-  <meta name="og:image" content="{{ site.url }}/public/logo.png"/>
-  <meta name="og:description" content="{{ page.description }}"/>
+  <meta name="og:image" content="{{ site.url }}/{{ site.avatar }}"/>
+  {% if page.title != "Home" %}
+  <meta name="og:description" content="{{ content | truncate:100 }}"/>
+  {% else %}
+  <meta name="og:description" content="Pregunta a {{ site.author.name }}"/>
+  {% endif %}
 
   <!--SimpleMDE editor-->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
@@ -26,14 +30,11 @@
   <!-- CSS -->
   <link rel="stylesheet" href="{{ site.baseurl }}/public/css/poole.css">
   <link rel="stylesheet" href="{{ site.baseurl }}/public/css/hyde.css">
-
-  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
-
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
   <link rel="stylesheet" href="{{ site.baseurl }}/public/css/sharing.css">
 
-
   <!-- Icons -->
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ site.baseurl }}/public/apple-touch-icon-144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ site.baseurl }}{{ site.avatar }}">
   <link rel="shortcut icon" href="{{ site.baseurl }}/public/favicon.ico">
 
   <!-- RSS -->

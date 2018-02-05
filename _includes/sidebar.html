@@ -4,7 +4,7 @@
     <div class="icon" style="background-image:url({{ site.baseurl }}/{{ site.avatar }});"></div>
     <div class="user">
       <span class="sidebar-name">
-        <a href="{{ site.url }}{{ site.baseurl }}">{{ site.author.name }}</a>
+        <a href="{{ site.baseurl }}/">{{ site.author.name }}</a>
       </span>
     </div>
 
@@ -13,42 +13,22 @@
       <!--   Pulsa <i class="fa fa-reply" aria-hidden="true"></i> para continuar una pregunta -->
       <!-- </div> -->
 
-      <form method="post" action="https://api.staticman.net/v2/entry/mx-psi/ask/master">
-        <input name="options[redirect]" type="hidden" value="{{ site.url }}{{ site.baseurl }}{{ page.url }}">
+      <form class="question-form" method="post" action="https://api.staticman.net/v2/entry/{{ site.github.repository_nwo }}/{{ site.github.source.branch }}">
+        <input name="options[redirect]" type="hidden" value="{{ page.url | absolute_url }}">
+
+        <fieldset style="display:none">
+          <input id="posts[address]" name="fields[address]" type="text">
+        </fieldset>
+
         <fieldset>
           <div>
             <textarea name="fields[title]" id="posts[title]" rows="4" type="text"></textarea>
           </div>
         </fieldset>
-        <fieldset>
+        <fieldset style="display:flex">
           <button class="send-button">Enviar</button>
+          <div class="form-status"></div>
         </fieldset>
       </form>
-
-      <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
-      <script>
-        var simplemde = new SimpleMDE({
-        element: document.getElementById("posts[title]"),
-        autosave: {
-		    enabled: true,
-		    uniqueId: "posts[title]",
-		    delay: 1000,
-	      },
-        toolbar: ["bold", "italic", "|", "quote", "link", "|", "preview", "guide"],
-        placeholder: "{{ site.placeholder }}",
-        spellChecker: false,
-        status: false
-        });
-      </script>
-      <style>
-        .CodeMirror{
-          min-height: 1rem;
-          max-height: 35vh;
-        }
-        .CodeMirror-scroll{
-          max-height: 34vh;
-          padding-bottom: 1rem;
-        }
-      </style>
     </div>
 </div>
