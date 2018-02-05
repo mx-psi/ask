@@ -23,8 +23,8 @@ var simplemde = new SimpleMDE({
       data: $(this).serialize(),
       contentType: 'application/x-www-form-urlencoded',
       success: function (data) {
-        show('Enviado');
-        simplemde.toTextArea();
+        show('Enviado!');
+        simplemde.value();
         $(form).removeClass('form--loading');
       },
       error: function (err) {
