@@ -24,7 +24,7 @@ var simplemde = new SimpleMDE({
       contentType: 'application/x-www-form-urlencoded',
       success: function (data) {
         show('Enviado!');
-        simplemde.value();
+        simplemde.value("");
         $(form).removeClass('form--loading');
       },
       error: function (err) {
