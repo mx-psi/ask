@@ -2,9 +2,7 @@
 {{ include.title | markdownify | strip_html | normalize_whitespace |  truncate:130 | url_encode }} — {{ include.content | markdownify | strip_html | normalize_whitespace | truncate:100 | url_encode }}
 {% endcapture %}
 
-{% capture url %}
-{{ include.url | absolute_url }}
-{% endcapture %}
+{% capture url %}{{ include.url | absolute_url }}{% endcapture %}
 
 <div class="sharing">
 
