@@ -16,7 +16,7 @@
   <meta name="twitter:site" content="@{{ site.author.twitter }}" />
   <meta name="og:url" content="{{ page.url | absolute_url }}"/>
   <meta name="og:title" content="{% if page.title == "Home" %}{{ site.title }}{% else %}{{ page.title }}{% endif %}"/>
-  <meta name="og:image" content="{{ site.url }}/{{ site.avatar }}"/>
+  <meta name="og:image" content="{{ site.url }}/{{ site.baseurl }}/{{ site.avatar }}"/>
   {% if page.title != "Home" %}
   <meta name="og:description" content="{{ content | truncate:100 }}"/>
   {% else %}

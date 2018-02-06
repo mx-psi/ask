@@ -8,6 +8,7 @@ var simplemde = new SimpleMDE({
   toolbar: ["bold", "italic", "|", "quote", "link", "|", "preview", "guide"],
   placeholder: "Haz una pregunta!\nTu pregunta será pública en Github antes de ser respondida.",
   spellChecker: false,
+  shortcuts: {"toggleFullScreen": null},
   status: false
 });
 
