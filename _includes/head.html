@@ -16,9 +16,9 @@
   <meta name="twitter:site" content="@{{ site.author.twitter }}" />
   <meta name="og:url" content="{{ page.url | absolute_url }}"/>
   <meta name="og:title" content="{% if page.title == "Home" %}{{ site.title }}{% else %}{{ page.title }}{% endif %}"/>
-  <meta name="og:image" content="{{ site.url }}/{{ site.baseurl }}/{{ site.avatar }}"/>
+  <meta name="og:image" content="{{ site.url }}{{ site.baseurl }}/{{ site.avatar }}"/>
   {% if page.title != "Home" %}
-  <meta name="og:description" content="{{ content | truncate:100 }}"/>
+  <meta name="og:description" content="{{ page.content | strip_html | truncate:100 }}"/>
   {% else %}
   <meta name="og:description" content="Pregunta a {{ site.author.name }}"/>
   {% endif %}
