@@ -90,11 +90,27 @@ html {
   background-color: #f8f8f8;
   color: #666;
   margin: .3rem 0;
-  padding: .4rem .7rem;
+  padding: 10px .7rem;
   border: none;
   font-size: 1rem;
+  border-radius: 8px;
 }
 
+.send-button:hover{
+  background-color: #cfcfcf;
+  cursor: pointer;
+}
+
+.CodeMirror{
+  height: 6rem;
+  min-height: 6rem;
+}
+
+.CodeMirror-scroll{
+  height: 6rem;
+  min-height: 6rem;
+  padding-bottom: 1rem;
+}
 
 @media (min-width: 48em) {
   .sidebar {
@@ -114,6 +130,18 @@ html {
 
   .user{
     margin: -45px 0 0 9rem;
+  }
+
+  .CodeMirror{
+    min-height: 30vh;
+    max-height: 45vh;
+    height: auto;
+  }
+
+  .CodeMirror-scroll{
+    min-height: 30vh;
+    max-height: 45vh;
+    height: auto;
   }
 }
 
@@ -183,4 +211,22 @@ a.sidebar-nav-item:focus {
 .reply-to{
   padding: 1rem 1rem;
   padding-top: 3rem;
+}
+
+.form-loading{
+  opacity: .4;
+  cursor: wait;
+}
+
+.form-status{
+  margin: 0.3rem 0;
+  padding: 0.4rem 0;
+  margin-right: .4rem;
+  border: none;
+  width: 100%;
+  text-align: right;
+}
+
+.question-form{
+  padding-top: .5rem;
 }

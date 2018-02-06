@@ -14,8 +14,9 @@ var simplemde = new SimpleMDE({
 (function ($) {
   $('.question-form').submit(function () {
     var form = this;
-    $(form).addClass('form--loading');
-    show('Enviando...');
+    $(form).addClass('form-loading');
+    $(".send-button").prop( "disabled", true);
+    show('Enviando...', "inherit");
 
     $.ajax({
       type: $(this).attr('method'),
@@ -23,24 +24,28 @@ var simplemde = new SimpleMDE({
       data: $(this).serialize(),
       contentType: 'application/x-www-form-urlencoded',
       success: function (data) {
-        show('Enviado!');
+        show('Enviado ✓', "#158100", 3000);
         simplemde.value("");
-        $(form).removeClass('form--loading');
+        $(".send-button").prop( "disabled", false);
+        $(form).removeClass('form-loading');
       },
       error: function (err) {
         console.log(err);
-        showModal('Error');
-        $(form).removeClass('form--loading');
+        show('Error 🞬',"#cb0000", 3000);
+        $(".send-button").prop( "disabled", false);
+        $(form).removeClass('form-loading');
       }
     });
     return false;
   });
 
-  $('.js-close-modal').click(function () {
-    $('body').removeClass('show-modal');
-  });
-
-  function show(title) {
-    $('.send-button').text(title);
+  function show(title, color, delay) {
+    $('.form-status').css("color", color);
+    $('.form-status').text(title);
+    if(delay === undefined)
+      $('.form-status').show();
+    else{
+      $('.form-status').show().delay(delay).fadeOut();
+    }
   }
 })(jQuery);
