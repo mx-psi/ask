@@ -26,6 +26,7 @@ var simplemde = new SimpleMDE({
       contentType: 'application/x-www-form-urlencoded',
       success: function (data) {
         show('Enviado ✓', "#158100", 3000);
+	console.log(data);
         simplemde.value("");
         $(".send-button").prop( "disabled", false);
         $(form).removeClass('form-loading');
